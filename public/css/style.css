@@ -1,0 +1,185 @@
+/* General */
+body {
+    background-color: #000; /* Fondo oscuro para resaltar el efecto */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed; /* Mantiene el navbar en la parte superior */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté por encima del header */
+}
+
+:root {
+    --color-background: #333;
+    --color-text: #fff;
+    --color-neon: rgba(255, 204, 0, 1);
+    --color-neon-orange: rgba(255, 165, 0, 1);
+}
+
+/* Header */
+.header {
+    display: flex; /* Utiliza Flexbox para alinear los elementos */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    height: 200px; /* Aumenta la altura para evitar superposición */
+    padding: 40px;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    margin-top: 70px; /* Espacio para evitar la superposición con el navbar */
+}
+
+.header h1 {
+    margin: 0; /* Elimina márgenes por defecto del h1 */
+    text-align: center; /* Centra el texto */
+    font-size: 10vw; /* Tamaño de fuente relativo al ancho de la ventana */
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        height: auto; /* Permite que la altura se ajuste automáticamente */
+        align-items: center; /* Centra los elementos en la columna */
+        padding: 10px; /* Espaciado adicional en pantallas pequeñas */
+        margin-top: 60px; /* Ajusta el margen superior para pantallas pequeñas */
+    }
+
+    .header h1 {
+        font-size: 15vw; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 20vw; /* Ajusta el tamaño de la fuente para pantallas muy pequeñas */
+    }
+}
+
+/* Neon Effect */
+.neon {
+    color: var(--color-text); /* Color del texto */
+    font-size: 10vw;
+    text-shadow:
+        0 0 5px var(--color-neon),
+        0 0 10px var(--color-neon),
+        0 0 20px var(--color-neon),
+        0 0 40px var(--color-neon-orange),
+        0 0 80px var(--color-neon-orange),
+        0 0 90px var(--color-neon-orange),
+        0 0 100px var(--color-neon-orange),
+        0 0 140px var(--color-neon-orange),
+        0 0 180px var(--color-neon-orange); /* Sombras múltiples para crear el efecto de neón */
+}
+
+/* Neon Effect */
+.neon {
+    color: var(--color-text); /* Color del texto */
+    font-size: 60px;
+    text-shadow:
+        0 0 5px var(--color-neon),
+        0 0 10px var(--color-neon),
+        0 0 20px var(--color-neon),
+        0 0 40px var(--color-neon-orange),
+        0 0 80px var(--color-neon-orange),
+        0 0 90px var(--color-neon-orange),
+        0 0 100px var(--color-neon-orange),
+        0 0 140px var(--color-neon-orange),
+        0 0 180px var(--color-neon-orange); /* Sombras múltiples para crear el efecto de neón */
+}
+
+/* Main and Cards */
+.main-title {
+    font-size: 50px;
+    font-family: Rakkas;
+    color: var(--color-text); /* Color del texto */
+    text-align: center;
+    margin-top: 20px;
+    text-shadow:
+        0 0 5px var(--color-neon),
+        0 0 10px var(--color-neon),
+        0 0 20px var(--color-neon),
+        0 0 40px var(--color-neon-orange),
+        0 0 80px var(--color-neon-orange),
+        0 0 90px var(--color-neon-orange),
+        0 0 100px var(--color-neon-orange),
+        0 0 140px var(--color-neon-orange),
+        0 0 180px var(--color-neon-orange); /* Sombras múltiples para crear el efecto de neón */
+}
+
+/* Estilos para el contenedor de las tarjetas */
+.card-deck {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Estilos para cada tarjeta individual */
+.card {
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    margin: 10px;
+    flex: 1 0 21%;
+}
+
+/* Efecto hover para las tarjetas */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el título de la tarjeta */
+.card-title {
+    font-size: 24px; /* Tamaño de fuente grande */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+/* Estilos para el texto de la tarjeta */
+.card-text {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+/* Media Queries para diseño responsivo */
+/* Dispositivos grandes (escritorio) */
+@media (min-width: 1200px) {
+    .card {
+        flex: 1 0 21%; /* Tres tarjetas por fila */
+    }
+}
+
+/* Dispositivos medianos (tablet) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .card {
+        flex: 1 0 45%; /* Dos tarjetas por fila */
+    }
+}
+
+/* Dispositivos pequeños (móvil) */
+@media (max-width: 767px) {
+    .card {
+        flex: 1 0 100%; /* Una tarjeta por fila */
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
