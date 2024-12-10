@@ -1,5 +1,5 @@
 # TpFinal_JavaScript_Tecno3F
-Trabajo final curso de Javascript Tecno 3F 2024
+Trabajo final curso de Javascript
 
 Para el diseño del sitio web, se vinculó una API creada en firebase.
 https://jscriptcouse-default-rtdb.firebaseio.com/tragos.json , esta configurada como pública cualquiera puede tener acceso, y modificarla. 
